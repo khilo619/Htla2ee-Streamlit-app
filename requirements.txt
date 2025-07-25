@@ -1,0 +1,30 @@
+# Core Data Science & Web App
+streamlit==1.36.0
+pandas==2.2.2
+numpy==1.26.4
+
+# Machine Learning
+scikit-learn==1.5.0
+xgboost==2.0.3
+statsmodels==0.14.0
+
+# Data Visualization
+plotly==5.22.0
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Web Scraping (Educational)
+selenium==4.15.0
+beautifulsoup4==4.12.2
+requests==2.31.0
+webdriver-manager==4.0.1
+
+# Arabic Text Processing
+arabic-reshaper==3.0.0
+python-bidi==0.4.2
+
+# Database Integration
+pymongo==4.6.0
+
+# File Processing
+openpyxl==3.1.2
