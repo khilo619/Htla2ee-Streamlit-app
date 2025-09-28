@@ -11,3 +11,6 @@ xgboost==1.7.6
 plotly==5.22.0
 matplotlib==3.8.4
 seaborn==0.13.2
+
+xlrd
+openpyxl
