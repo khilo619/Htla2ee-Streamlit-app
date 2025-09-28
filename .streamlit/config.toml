@@ -1,6 +1,6 @@
 # Use a writable folder for Streamlit's runtime data
 [server]
 headless = true
-port = $PORT
+#port = $PORT
 enableCORS = false
 
