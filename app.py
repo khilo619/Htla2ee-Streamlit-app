@@ -120,7 +120,7 @@ st.markdown("""
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('cleaned_data.xls')
+    df = pd.read_excel('data/processed/cleaned_data.xls')
     return df
 
 # Helper function to encode features
