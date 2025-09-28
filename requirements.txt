@@ -14,9 +14,10 @@ matplotlib==3.8.4
 seaborn==0.13.2
 
 # Web Scraping (Educational)
+# selenium==4.15.0
+# webdriver-manager==4.0.1
 beautifulsoup4==4.12.2
 requests==2.31.0
-webdriver-manager==4.0.1
 
 # Arabic Text Processing
 arabic-reshaper==3.0.0
