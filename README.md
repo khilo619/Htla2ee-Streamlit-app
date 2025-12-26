@@ -1,302 +1,93 @@
-🚗 Htla2ee – Egyptian Used Car Market Explorer
-
-Htla2ee is an end-to-end data science & machine learning project that analyzes and predicts used car prices in the Egyptian market, combining ethical data collection, advanced ML modeling, and an interactive Streamlit web application deployed on Hugging Face Spaces.
-
-📌 Project Overview
-
-This project demonstrates a full real-world data science pipeline:
-
-Ethical web scraping of public car listings
-
-Data cleaning & feature engineering
-
-Exploratory data analysis with Arabic support
-
-Machine learning price prediction models
-
-Interactive Streamlit application
-
-Cloud deployment using Hugging Face Spaces
-
-The application allows users to:
-
-Explore the Egyptian used car market
-
-Analyze pricing trends by brand, city, and year
-
-Predict car prices using trained ML models
-
-Compare different car configurations
-
-⚠️ Ethical & Legal Disclaimer
-
-This project uses publicly available car listing data collected strictly for educational and research purposes.
-
-✅ Respects robots.txt and website terms
-
-✅ Applies rate limiting during scraping
-
-✅ Collects no personal or private data
-
-❌ Not intended for commercial usage
-
-Users are responsible for ensuring compliance with local laws and website policies.
-
-🚀 Key Features
-🔍 Data Collection
-
-Ethical web scraping using Selenium & BeautifulSoup
-
-Rate limiting and respectful crawling
-
-Structured storage for further analysis
-
-🧹 Data Processing
-
-Missing value handling & duplicate removal
-
-Outlier filtering (price, mileage, year)
-
-Feature engineering (car age, log mileage)
-
-Target encoding for categorical variables
-
-📊 Exploratory Data Analysis
-
-Price trends & depreciation analysis
-
-Brand, city, and transmission comparisons
-
-Arabic text rendering support
-
-Interactive and static visualizations
-
-🤖 Machine Learning
-
-Ridge Regression (baseline, stable)
-
-XGBoost Regressor (high accuracy)
-
-Cross-validation & performance comparison
-
-Feature importance analysis
-
-🌐 Streamlit Web Application
-
-Market dashboard
-
-Dataset exploration
-
-AI-based price prediction
-
-Car-to-car comparison
-
-Arabic-friendly UI
-
-🗂️ Project Structure
-Htla2ee-Streamlit-app/
-├── app.py                         # Streamlit application
-├── requirements.txt               # Python dependencies
-├── README.md                      # Documentation
-├── data/
-│   ├── processed/
-│   │   ├── cleaned_data.csv
-│   │   └── cleaned_data.xls
-│   └── exports/
-│       └── Used_Car_Analysis_Egypt.mydatabase.json
-├── notebooks/
-│   ├── 01_data_extraction.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_data_visualization.ipynb
-│   ├── 04_price_prediction.ipynb
-│   └── 05_mongodb_integration.ipynb
-
-🔄 Data Science Pipeline
-1️⃣ Data Extraction
-
-Automated browsing via Selenium
-
-Extraction of brand, model, year, mileage, price, city, transmission
-
-2️⃣ Data Cleaning & Feature Engineering
-
-Data type correction
-
-Outlier removal
-
-Car age calculation
-
-Encoding categorical features
-
-Mileage transformation
-
-3️⃣ Exploratory Data Analysis
-
-Price vs age & mileage
-
-Brand and city price distribution
-
-Transmission impact
-
-Arabic visualization support
-
-4️⃣ Machine Learning Models
-Model	R² Score	MAE	Notes
-Ridge Regression	~0.85	~15%	Stable baseline
-XGBoost	~0.91	~9.7%	Best performance
-5️⃣ Deployment
-
-Models integrated into Streamlit app
-
-Hosted on Hugging Face Spaces
-
-🌐 Streamlit Application
-
-The app provides an intuitive interface for both technical and non-technical users.
-
-Main Sections
-
-📊 Market Overview Dashboard
-
-🔍 Dataset Exploration
-
-💰 Price Prediction
-
-⚖️ Car Comparison
-
-Predictions are generated instantly using trained ML models.
-
-🤗 Hugging Face Deployment
-
-This project is fully compatible with Hugging Face Spaces and uses the following configuration (already included at the top of this README):
-
+---
+title: Htla2ee Streamlit App
+emoji: 🚗
+colorFrom: blue
+colorTo: green
 sdk: streamlit
+sdk_version: "1.28.0"
 app_file: app.py
-sdk_version: 1.28.0
+pinned: false
+---
 
-🚀 Deploy to Hugging Face Spaces
+# Htla2ee Streamlit App 🚗
 
-Create a new Streamlit Space on Hugging Face
+## Overview
+Htla2ee Streamlit App is a professional data analytics and price prediction platform for Egypt's used car market. Leveraging real data scraped from Hatla2ee, the app provides:
+- Interactive market exploration
+- Advanced data visualizations
+- AI-powered price prediction
+- Car comparison tools
 
-Connect your GitHub repository or upload files manually
+## Features
+- **Market Explorer:** Filter and explore thousands of car listings by brand, model, year, price, and city.
+- **Data Visualization:** Dynamic charts for price trends, brand/city analysis, transmission and fuel type distributions, and more.
+- **Price Prediction:** Machine learning models (Ridge Regression & XGBoost) estimate car prices based on user input.
+- **Car Comparison:** Side-by-side comparison of two cars across key metrics.
+- **MongoDB Integration:** Store and manage cleaned data for scalable analytics.
 
-Ensure the following files exist:
+## Data Pipeline
+The project follows a robust data science workflow:
 
-app.py
+### 1. Data Extraction ([notebooks/01_data_extraction.ipynb](notebooks/01_data_extraction.ipynb))
+- Scrapes car listings from Hatla2ee using Selenium and BeautifulSoup
+- Extracts brand, model, price, year, mileage, city, transmission, color, fuel, and date
 
-requirements.txt
+### 2. Data Cleaning ([notebooks/02_data_cleaning.ipynb](notebooks/02_data_cleaning.ipynb))
+- Handles missing values, removes duplicates, and corrects data types
+- Cleans and standardizes price, mileage, and categorical fields
+- Removes outliers and unrealistic entries
+- Outputs a clean dataset: [data/processed/cleaned_data.csv](data/processed/cleaned_data.csv)
 
-README.md (with HF metadata header)
+### 3. Data Visualization ([notebooks/03_data_visulaization.ipynb](notebooks/03_data_visulaization.ipynb))
+- Explores trends in price, year, brand, city, transmission, and fuel type
+- Uses Matplotlib, Seaborn, and Plotly for interactive and publication-quality charts
 
-Hugging Face will automatically:
+### 4. Price Prediction ([notebooks/04_price_prediction.ipynb](notebooks/04_price_prediction.ipynb))
+- Feature engineering: target encoding, polynomial features, log transforms
+- Trains and evaluates Ridge Regression and XGBoost models
+- Reports R² and MAE for model performance
 
-Install dependencies
+### 5. MongoDB Integration ([notebooks/05_mongodb_integration.ipynb](notebooks/05_mongodb_integration.ipynb))
+- Loads cleaned data into a MongoDB database for scalable querying and analytics
 
-Launch the Streamlit app
+## App Structure
+- **app.py:** Main Streamlit app with navigation, visualizations, prediction, and comparison modules
+- **data/processed/cleaned_data.csv:** Final cleaned dataset used by the app
+- **notebooks/**: Jupyter notebooks for each pipeline stage
 
-Host it publicly
+## Usage
+1. **Install requirements:**
+	```bash
+	pip install -r requirements.txt
+	```
+2. **Run the app locally:**
+	```bash
+	streamlit run app.py
+	```
+3. **Explore the app:**
+	- Use the sidebar to navigate between Market Explorer, Data Visualization, Price Prediction, and Car Comparison
 
-✅ No Docker required
-✅ Automatic rebuild on updates
+## Requirements
+- Python 3.11 (see `runtime.txt`)
+- All dependencies listed in `requirements.txt` or `req.txt`
 
-▶️ Run Locally
-Prerequisites
+## Hugging Face Deployment
+This app is ready for deployment on [Hugging Face Spaces](https://huggingface.co/spaces):
 
-Python 3.8+
+1. **Prepare your repository:**
+	- Ensure `app.py`, `requirements.txt`, and `runtime.txt` are in the root directory
+	- Add your data files (or use a public data source)
+2. **Create a new Space:**
+	- Go to [Hugging Face Spaces](https://huggingface.co/spaces)
+	- Select "Streamlit" as the SDK
+	- Link your repository or upload your files
+3. **Configure:**
+	- The app will automatically launch using `app.py`
+	- Make sure your requirements and runtime files are correct
 
-pip
+For more details, see the [Hugging Face Streamlit deployment guide](https://huggingface.co/docs/hub/spaces-sdks-streamlit).
 
-Installation
-git clone https://github.com/khilo619/Htla2ee-Streamlit-app.git
-cd Htla2ee-Streamlit-app
-pip install -r requirements.txt
-
-Launch App
-streamlit run app.py
-
-
-Open: http://localhost:8501
-
-🛠️ Tech Stack
-
-Core
-
-Python
-
-Streamlit
-
-Pandas, NumPy
-
-Scikit-learn
-
-XGBoost
-
-Visualization
-
-Plotly
-
-Matplotlib
-
-Seaborn
-
-Scraping (Educational)
-
-Selenium
-
-BeautifulSoup
-
-Requests
-
-Arabic Support
-
-arabic-reshaper
-
-python-bidi
-
-🎓 Educational Value
-
-This repository is ideal for:
-
-Data science portfolios
-
-Machine learning practice
-
-End-to-end project demonstrations
-
-Streamlit & Hugging Face deployment learning
-
-🤝 Contributing
-
-Contributions are welcome for educational improvements.
-
-Fork the repo
-
-Create a feature branch
-
-Commit changes
-
-Open a Pull Request
-
-📄 License & Legal
-
-Educational Use Only
-
-No commercial usage
-
-No redistribution of scraped data
-
-Respect data source policies
-
-📬 Contact
-
-GitHub: https://github.com/khilo619/Htla2ee-Streamlit-app
-
-Issues: Bug reports & feature requests welcome
-
-<div align="center">
-
-⭐ If you found this project useful, consider giving it a star! ⭐
-
-Built with ❤️ for learning, data science, and real-world ML applications.
-
-</div> ```
+---
+**Author:** [KhaLood]  
+**Data Source:** [Hatla2ee](https://eg.hatla2ee.com/)  
+**License:** MIT
