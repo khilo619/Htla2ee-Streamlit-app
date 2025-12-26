@@ -1,15 +1,3 @@
----
-title: Htla2ee Streamlit App
-emoji: 🚗
-colorFrom: blue
-colorTo: green
-sdk: streamlit
-sdk_version: "1.28.0"
-app_file: app.py
-pinned: false
----
-
-
 # 🚗 Used Car Market Explorer – Egypt
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
