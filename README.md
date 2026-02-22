@@ -290,7 +290,8 @@ This project was built collaboratively, dividing the data engineering and machin
     * **Exploratory Data Analysis:** Conducted in-depth EDA to surface key insights and patterns from the data. 
 
 * **KhaLood** ([@khilo619](https://github.com/khilo619)):
-    * **Machine Learning & Deployment:** Developed the Ridge Regression and XGBoost prediction models, and built the interactive Streamlit web application. 
+    * **Machine Learning:** Built the full machine learning prediction models pipeline.
+    * **Deployment:** Built the interactive Streanlit appliction with market dashboard, price prediction, and car comparison features.
 
 ---
 
