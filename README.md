@@ -275,6 +275,25 @@ This project serves as a comprehensive educational resource demonstrating:
 
 ---
 
+## 👥 Core Team & Contributions
+This project was built collaboratively, dividing the data engineering and machine learning pipelines:
+
+* **3blatif** ([@abdellatif72](https://github.com/abdellatif72)):
+    * **Web Scraping & Data Pipeline:** Engineered the ethical web scraping pipeline and overall data engineering workflow.
+    * **Data Cleaning (Support):** Assisted in the data cleaning and preprocessing phase alongside Yasser.
+    * **Database Integration:** Managed the MongoDB database integration.
+
+* **Yasser** ([@yasserAker-sketch](https://github.com/yasserAker-sketch)):
+    * **Data Cleaning & Preprocessing:** Led the data cleaning and preprocessing to prepare the dataset for analysis and modeling. 
+
+* **Islam** ([@IslamAhragab](https://github.com/IslamAhragab)):
+    * **Exploratory Data Analysis:** Conducted in-depth EDA to surface key insights and patterns from the data. 
+
+* **KhaLood** ([@khilo619](https://github.com/khilo619)):
+    * **Machine Learning & Deployment:** Developed the Ridge Regression and XGBoost prediction models, and built the interactive Streamlit web application. 
+
+---
+
 ## 🤝 Contributing
 
 This is an educational project, but contributions are welcome! Please:
@@ -359,6 +378,6 @@ This app is ready for deployment on [Hugging Face Spaces](https://huggingface.co
 For more details, see the [Hugging Face Streamlit deployment guide](https://huggingface.co/docs/hub/spaces-sdks-streamlit).
 
 ---
-**Author:** [KhaLood]  
+**Authors:** [KhaLood] & [3blatif]  
 **Data Source:** [Hatla2ee](https://eg.hatla2ee.com/)  
 **License:** MIT
